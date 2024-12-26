@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Shop_Bot"
+version = "0.1"
+requires-python = "==3.11.*"
+dependencies = [
+    "flask~=3.1.0",
+    "langchain~=0.3.10",
+    "python-dotenv~=1.0.1",
+    "langchain_openai~=0.2.12",
+    "langchain-community~=0.3.11",
+    "faiss-cpu~=1.9.0"
+]
+
+# pip install -e .

@@ -1,0 +1,492 @@
+body {
+    position: relative;
+
+    width: 100%;
+    height: 435%;
+
+    min-width: 800px;
+    min-height: 600px;
+
+    background: #FDFAF3;
+}
+
+body img {
+    transition: transform 1s ease;
+    cursor: pointer;
+}
+
+body img:hover {
+  transform: scale(1.05);
+}
+
+header {
+    width: 100%;
+    height: 4%;
+
+    min-width: 800px;
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid black;
+}
+
+header div {
+    display: flex;
+
+    gap: 1vw;
+
+    font-family: Open Sans, cursive;
+    font-size: 100%;
+    font-weight: 1000;
+    line-height: 2vh;
+
+    margin-left: 3vw;
+    margin-right: 3vw;
+
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+header div a {
+    text-decoration: none;
+    color: black;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 80%;
+
+    line-height: 1.5vh;
+    text-align: center;
+
+}
+
+header div a:hover {
+    color: gray;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main div {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+
+    color: white;
+    bottom: 10vh;
+    left: 5vw;
+
+    max-width: 30vw;
+
+    font-family: Dharma Gothic E, sans-serif;
+    font-size: 4.5vw;
+    font-weight: 700;
+    line-height: 14vh;
+    text-align: left;
+
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    transition: color 1s ease;
+
+    z-index: 1;
+}
+
+#main_header_img {
+    width: 97.4vw;
+    height: 95vh;
+
+    min-width: 774px;
+
+    left: -0.1vw;
+
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    transition: none;
+    transform: none;
+}
+
+.main_products {
+    width: 31.6vw;
+    height: 64vh;
+
+    min-width: 251px;
+
+    display: inline-block;
+    border: 1px solid black;
+
+    margin-top: 4vh;
+    margin-left: 4%;
+
+    position: relative;
+}
+
+.product + .product {
+    margin-left: 1vw;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product > .overlay-text {
+    bottom: 1vh;
+    left: 4vw;
+    font-size: 2.5vw;
+}
+
+.topics {
+    width: 80vw;
+    height: 50vh;
+    left: 0.5vw;
+    top: 10vh;
+
+    font-family: Dharma Gothic E, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11vw;
+    line-height: 76%;
+    text-transform: uppercase;
+
+    min-height: 150px;
+
+    color: black;
+
+    position: relative;
+
+    transition: color 1s ease;
+}
+
+#final_topic {
+    color: burlywood;
+    transition: color 1s ease;
+}
+
+#final_topic:hover {
+    color: coral;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+
+    gap: 1.7%;
+    width: 100vw;
+    min-width: 800px;
+}
+
+.foot-wrapper {
+    display: flex;
+    justify-content: left;
+
+    gap: 0.5vw;
+    width: 100vw;
+
+    margin-top: -20vh;
+    margin-left: 1vw;
+}
+
+.executive_products {
+    width: 30vw;
+    height: 50vh;
+    object-fit: cover;
+    margin-top: 7vh;
+    border: 1px solid black;
+    min-width: 240px;
+    min-height: 200px;
+}
+
+.other_products {
+    width: 23.8vw;
+    height: 45vh;
+    object-fit: cover;
+    margin-top: 7vh;
+    border: 1px solid black;
+    min-width: 190px;
+    min-height: 200px;
+}
+
+.separator {
+    width: 1px;
+    height: 70vh;
+    background-color: black;
+    min-height: 280px;
+}
+
+.horizontal-separator {
+    width: 100vw;
+    min-width: 800px;
+    height: 1px;
+    background-color: black;
+}
+
+.short-horizontal-separator {
+    margin-top: 6vh;
+    width: 23.7vw;
+    height: 1px;
+    background-color: black;
+}
+
+.image-caption {
+    text-align: left;
+    margin-left: -3px;
+    font-family: Dharma Gothic E, sans-serif;
+    font-size: 3vw;
+    font-weight: 700;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    transition: color 1s ease;
+}
+
+.image-cost {
+    font-family: Recoleta Alt, serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    transition: color 1s ease;
+}
+
+#food_presentation {
+    width: 66.78vw;
+    height: 65vh;
+    border-left: 1px solid black;
+}
+
+#food_presentation_topic {
+    text-align: center;
+    top: 10vh;
+    width: 50%;
+
+    font-family: Dharma Gothic E, sans-serif;
+    font-size: 5vw;
+    font-weight: 700;
+    line-height: 150%;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    transition: color 1s ease;
+}
+
+.presentation-topic {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.image-caption:hover, .image-cost:hover, .topics:hover, #food_presentation_topic:hover {
+    color: gray;
+}
+
+.overlay-text:hover {
+    color: coral;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20%;
+    padding: 2%;
+    font-family: sans-serif;
+    background-color: burlywood;
+    margin-top: 10vh;
+    width: 98vw;
+    height: 65vh;
+    min-height: 320px;
+    min-width: 760px;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.email {
+    padding-top: 3%;
+    padding-left: 3%;
+    font-size: 4vh;
+
+    font-family: Recoleta Alt, sans-serif;
+    font-weight: 500;
+    line-height: 1.5vh;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.email a {
+    color: #FDFAF3;
+}
+
+.links-container {
+    display: flex;
+    gap: 20px;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    line-height: 200%;
+}
+
+.link-column a, .copyright, .social-links a {
+    color: black;
+    font-weight: 500;
+    font-size: 100%;
+}
+
+.logo {
+    text-align: center;
+    font-size: 11vw;
+    font-weight: 1000;
+
+    color: #FDFAF3;
+
+    font-family: Open Sans, cursive;
+    line-height: 2vh;
+
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: coral;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #FDFAF3;
+    color: burlywood;
+    padding: 1vh 10vw;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid burlywood;
+    box-shadow: 0 30px 60px red;
+
+    font-family: Dharma Gothic E, serif;
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.chat-popup {
+    position: fixed;
+    bottom: 5vh;
+    right: 0;
+    width: 26.2vw;
+    height: 50vh;
+    background-color: #FDFAF3;
+    border: 1px solid burlywood;
+    border-radius: 5px;
+    display: none;
+
+    z-index: 1;
+}
+
+.chat-header {
+    background-color: burlywood;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -1px 20px burlywood;
+}
+
+.chat-content {
+    overflow-y: auto;
+    height: calc(100% - 7.5vh);
+    box-shadow: 1px 6px 20px burlywood;
+    margin-left: 5px;
+}
+
+.chat-messages {
+    height: calc(100% - 2.5vh);
+    display: block;
+    overflow-y: scroll;
+}
+
+.b-message, .u-message {
+    text-align: left;
+    font-family: Dharma Gothic E, serif;
+    font-weight: 700;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: sienna;
+}
+
+.u-message {
+    color: peru;
+}
+
+.user-message, .bot-message {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.user-message, .bot-message {
+    background-color: burlywood;
+    color: white;
+}
+
+#message-input {
+    position: fixed;
+    border-radius: 5px;
+    border: 1px solid burlywood;
+    width: 26.2vw;
+    height: 2.2vh;
+    box-shadow: 0 5px 7px burlywood;
+}
+
+#send-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
