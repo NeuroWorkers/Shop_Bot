@@ -270,7 +270,7 @@ main div {
 #food_presentation {
     width: 66.78vw;
     height: 65vh;
-    border-left: 1px solid black;
+    border: 1px solid black;
 }
 
 #food_presentation_topic {
@@ -305,14 +305,16 @@ main div {
 footer {
     display: flex;
     flex-direction: column;
-    gap: 20%;
+    gap: 15vh;
     padding: 2%;
     font-family: sans-serif;
     background-color: burlywood;
+    border: 1px solid black;
     margin-top: 10vh;
+    margin-bottom: -1vh;
     width: 98vw;
-    height: 65vh;
-    min-height: 320px;
+    height: 67vh;
+    min-height: 420px;
     min-width: 760px;
 }
 
@@ -328,7 +330,6 @@ footer {
     padding-left: 3%;
     font-size: 4vh;
 
-    font-family: Recoleta Alt, sans-serif;
     font-weight: 500;
     line-height: 1.5vh;
     text-align: left;
@@ -337,7 +338,10 @@ footer {
 }
 
 .email a {
-    color: #FDFAF3;
+    color: black;
+    font-family: Open Sans, cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
 }
 
 .links-container {
@@ -355,6 +359,9 @@ footer {
     color: black;
     font-weight: 500;
     font-size: 100%;
+    font-family: Open Sans, cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
 }
 
 .logo {
@@ -365,6 +372,8 @@ footer {
     color: #FDFAF3;
 
     font-family: Open Sans, cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
     line-height: 2vh;
 
     margin-top: 10vh;
@@ -385,7 +394,12 @@ footer {
 }
 
 footer a {
-  text-decoration: none;
+    text-decoration: none;
+
+    font-size: 1.3vh;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
 }
 
 footer a:hover {
@@ -396,17 +410,23 @@ footer a:hover {
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: #FDFAF3;
-    color: burlywood;
+    background-color: transparent;
+    color: black;
     padding: 1vh 10vw;
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid burlywood;
+    border: 1px solid black;
     box-shadow: 0 30px 60px red;
 
-    font-family: Dharma Gothic E, serif;
+    font-family: 'Roboto', serif;
+    text-shadow:
+                -1px -1px 0 rgba(255, 255, 255, 0.5),
+                 1px -1px 0 rgba(255, 255, 255, 0.5),
+                -1px  1px 0 rgba(255, 255, 255, 0.5),
+                 1px  1px 0 rgba(255, 255, 255, 0.5);
+    animation: fadeIn 2s ease-in-out;
     font-size: 1.2vw;
-    font-weight: 500;
+    font-weight: 900;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
@@ -415,31 +435,30 @@ footer a:hover {
     position: fixed;
     bottom: 5vh;
     right: 0;
-    width: 26.2vw;
+    width: 26.1vw;
     height: 50vh;
     background-color: #FDFAF3;
-    border: 1px solid burlywood;
+    border: 2px solid lightgray;
     border-radius: 5px;
     display: none;
 
-    z-index: 1;
+    z-index: 9999 !important;
 }
 
 .chat-header {
-    background-color: burlywood;
+    background-color: lightgray;
     color: white;
-    padding: 10px;
+    padding: 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 -1px 20px burlywood;
+    box-shadow: 0 -1px 20px lightgray;
 }
 
 .chat-content {
     overflow-y: auto;
-    height: calc(100% - 7.5vh);
-    box-shadow: 1px 6px 20px burlywood;
-    margin-left: 5px;
+    height: calc(100% - 1.5vh);
+    margin: 5px;
 }
 
 .chat-messages {
@@ -454,11 +473,11 @@ footer a:hover {
     font-weight: 700;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: sienna;
+    color: lightcoral;
 }
 
 .u-message {
-    color: peru;
+    color: burlywood;
 }
 
 .user-message, .bot-message {
@@ -469,17 +488,19 @@ footer a:hover {
 }
 
 .user-message, .bot-message {
-    background-color: burlywood;
+    background-color: lightgray;
     color: white;
 }
 
 #message-input {
     position: fixed;
-    border-radius: 5px;
-    border: 1px solid burlywood;
-    width: 26.2vw;
-    height: 2.2vh;
-    box-shadow: 0 5px 7px burlywood;
+    bottom: 0;
+    right: 0;
+    padding: -1%;
+    border: 2px solid lightgray;
+    width: 25.97vw;
+    height: 5.2vh;
+    box-shadow: 0 5px 7px lightgray;
 }
 
 #send-button {
@@ -490,3 +511,17 @@ footer a:hover {
     cursor: pointer;
 }
 
+#closeChat {
+    background: none;
+    color: lightcoral;
+    border: none;
+    cursor: pointer;
+}
+
+#closeChat:hover {
+    transform: scale(1.1);
+}
+
+#closeChat:active {
+    transform: scale(0.95);
+}

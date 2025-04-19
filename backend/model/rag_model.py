@@ -2,9 +2,9 @@ import logging
 import pprint
 from datetime import datetime
 from langchain_openai import OpenAI
-from bot.src.retriever import load_index
+from backend.model.retriever import load_index
 from langchain.chains import RetrievalQA
-from bot.src.config import OPENAI_API_KEY, MAX_TOKENS, LOG_FILE
+from configs.backend_config import OPENAI_API_KEY, MAX_TOKENS, LOG_FILE
 
 
 if not OPENAI_API_KEY:
@@ -34,7 +34,7 @@ def answer_question(retriever, question, history=None):
 
         history.append((question, ""))
 
-        docs = retriever.get_relevant_documents(question)
+        docs = retriever.invoke(question)
 
         log_entry["docs"] = docs
 

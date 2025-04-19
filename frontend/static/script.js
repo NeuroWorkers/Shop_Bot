@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!is_load) {
             const userAuthor = document.createElement('div');
             userAuthor.classList.add('chat-message', 'u-message');
-            userAuthor.textContent = "Вы";
+            userAuthor.textContent = "You";
 
             const userMessage = document.createElement('div');
             userMessage.classList.add('chat-message', 'user-message');
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 const botAuthor = document.createElement('div');
                 botAuthor.classList.add('chat-message', 'b-message');
-                botAuthor.textContent = "Бот";
+                botAuthor.textContent = "Bot";
 
                 const botMessage = document.createElement('div');
                 botMessage.classList.add('chat-message', 'bot-message');
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             const botInfo = document.createElement('div');
             botInfo.classList.add('chat-message', 'b-message');
-            botInfo.textContent = "Бот";
+            botInfo.textContent = "Bot";
 
             const botMessage = document.createElement('div');
             botMessage.classList.add('chat-message', 'bot-message');

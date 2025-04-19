@@ -1,7 +1,7 @@
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
-from bot.src.utils import load_json, ensure_path_exists
-from bot.src.config import DATA_PATH, VECTOR_STORE_PATH, OPENAI_API_KEY
+from backend.utils.utils import load_json, ensure_path_exists
+from configs.backend_config import DATA_PATH, VECTOR_STORE_PATH, OPENAI_API_KEY
 
 
 def create_index():

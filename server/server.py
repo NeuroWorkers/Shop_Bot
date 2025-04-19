@@ -1,13 +1,12 @@
 from flask import Flask, render_template, request, jsonify
-from bot.src.retriever import create_index
-from bot.src.utils import is_folder_empty
-from bot.src.config import VECTOR_STORE_PATH, HISTORY
-from bot.src.rag_model import initialize_rag_model, answer_question
+from backend.model.retriever import create_index
+from backend.utils.utils import is_folder_empty
+from configs.backend_config import VECTOR_STORE_PATH, HISTORY, BASE_DIR
+from backend.model.rag_model import initialize_rag_model, answer_question
+import os
 
 # Создание приложения Flask
-app = Flask(__name__)
-app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.config['TEMPLATES_FOLDER'] = 'server/templates'
+app = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'frontend/templates'), static_folder=os.path.join(BASE_DIR, 'frontend/static'))
 
 retriever = initialize_rag_model()
 
