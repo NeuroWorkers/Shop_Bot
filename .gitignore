@@ -1,2 +1,6 @@
 /env/
 /.idea/
+/install/key
+/install/.env
+/backend/vector_store/index.faiss
+/backend/vector_store/index.pkl

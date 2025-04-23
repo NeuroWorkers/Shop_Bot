@@ -12,36 +12,35 @@
         <div id="header_shop_name">
             FOODHOODCOM
         </div>
-        <div id="footer_links">
-            <a href="https://localhost">FRUIT</a>
-            <a href="https://localhost">VEGETABLES</a>
-            <a href="https://localhost">MEAT</a>
-            <a href="https://localhost">FURNITURE</a>
-            <a href="https://localhost">GROCERIES</a>
+        <div id="header_links">
+            <a href="/fruit">FRUIT</a>
+            <a href="/vegetables">VEGETABLES</a>
+            <a href="/meat">MEAT</a>
+            <a href="/berries">BERRIES</a>
+            <a href="/other">OTHER</a>
         </div>
-        <div id="footer_settings">
-            <a href="https://localhost">ACCOUNT</a>
-            <a href="https://localhost">WISHLIST</a>
-            <a href="https://localhost">SEARCH</a>
-            <a href="https://localhost">BAG</a>
+        <div id="header_settings">
+            <a href="/wishlist">WISHLIST</a>
+            <a href="/search">SEARCH</a>
+            <a href="/bag">BAG</a>
         </div>
     </header>
     <main>
         <div>
-            <img id="main_header_img" src="../static/imgs/logo_fruit.jpeg" alt="logo_fruit ">
+            <img id="main_header_img" src="../static/imgs/Logo.webp" alt="logo_fruit ">
             <div class="overlay-text">NEW FOOD COLLECTION NOW AVAILABLE</div>
         </div>
         <div class="product-grid">
             <div class="product">
-                <img class="main_products" src="../static/imgs/blackberry.jpeg" alt="blackberry">
+                <img class="main_products" src="../static/imgs/berries/blackberry.jpg" alt="blackberry">
                 <div class="overlay-text">BLACKBERRY</div>
             </div>
             <div class="product">
-                <img class="main_products" src="../static/imgs/coconut.jpg" alt="coconut">
+                <img class="main_products" src="../static/imgs/fruit/coconut.jpg" alt="coconut">
                 <div class="overlay-text">COCONUT</div>
             </div>
             <div class="product">
-                <img class="main_products" src="../static/imgs/aroma.webp" alt="aroma">
+                <img class="main_products" src="../static/imgs/other/aroma.avif" alt="aroma">
                 <div class="overlay-text">AROMA</div>
             </div>
         </div>
@@ -49,21 +48,36 @@
         <div class="horizontal-separator"></div>
         <div class="image-wrapper">
         <div class="image-container">
-            <img class="executive_products" src="../static/imgs/pomegranate.webp" alt="pomegranate">
+            <img class="executive_products" src="../static/imgs/fruit/pomegranate.webp" alt="pomegranate">
             <div class="image-caption">Pomegranate</div>
             <div class="image-cost">R 199.00</div>
+            <button class="wishlist-button" data-product-name="Pomegranate" data-product-price="199.00">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </button>
         </div>
         <div class="separator"></div>
         <div class="image-container">
-            <img class="executive_products" src="../static/imgs/peach.jpg" alt="peach">
+            <img class="executive_products" src="../static/imgs/fruit/peach.jpg" alt="peach">
             <div class="image-caption">Peach</div>
             <div class="image-cost">R 277.00</div>
+            <button class="wishlist-button" data-product-name="Peach" data-product-price="277.00">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </button>
         </div>
         <div class="separator"></div>
         <div class="image-container">
-            <img class="executive_products" src="../static/imgs/cherries.jpg" alt="cherries">
+            <img class="executive_products" src="../static/imgs/berries/cherries.jpg" alt="cherries">
             <div class="image-caption">Cherries</div>
             <div class="image-cost">R 259.00</div>
+            <button class="wishlist-button" data-product-name="Cherries" data-product-price="259.00">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </button>
         </div>
         </div>
         <div class="horizontal-separator"></div>
@@ -71,21 +85,36 @@
         <div class="horizontal-separator"></div>
         <div class="image-wrapper">
             <div class="image-container">
-                <img class="executive_products" src="../static/imgs/beef.avif" alt="beef">
+                <img class="executive_products" src="../static/imgs/meet/beef.avif" alt="beef">
                 <div class="image-caption">Beef</div>
                 <div class="image-cost">R 499.00</div>
+                <button class="wishlist-button" data-product-name="Beef" data-product-price="499.00">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
             </div>
             <div class="separator"></div>
             <div class="image-container">
-                <img class="executive_products" src="../static/imgs/pork.webp" alt="pork">
+                <img class="executive_products" src="../static/imgs/meet/pork.webp" alt="pork">
                 <div class="image-caption">Pork</div>
                 <div class="image-cost">R 577.00</div>
+                <button class="wishlist-button" data-product-name="Pork" data-product-price="577.00">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
             </div>
             <div class="separator"></div>
             <div class="image-container">
-                <img class="executive_products" src="../static/imgs/venison.jpg" alt="venison">
+                <img class="executive_products" src="../static/imgs/meet/venison.jpg" alt="venison">
                 <div class="image-caption">Venison</div>
                 <div class="image-cost">R 859.00</div>
+                <button class="wishlist-button" data-product-name="Venison" data-product-price="859.00">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
             </div>
         </div>
         <div class="horizontal-separator"></div>
@@ -93,28 +122,43 @@
             <div id="food_presentation_topic">D.R.A
                 57/40
                 PROART IN FOOD</div>
-            <img id="food_presentation" src="../static/imgs/fruits.avif" alt="fruits">
+            <img id="food_presentation" src="../static/imgs/fruit/fruits.avif" alt="fruits">
         </div>
         <div class="horizontal-separator"></div>
         <div class="topics">EXCLUSIVE OFFERS</div>
         <div class="horizontal-separator"></div>
         <div class="image-wrapper">
             <div class="image-container">
-                <img class="executive_products" src="../static/imgs/green.webp" alt="green">
+                <img class="executive_products" src="../static/imgs/vegetables/green.webp" alt="green">
                 <div class="image-caption">Green</div>
                 <div class="image-cost">R 599.00</div>
+                <button class="wishlist-button" data-product-name="Green" data-product-price="599.00">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
             </div>
             <div class="separator"></div>
             <div class="image-container">
-                <img class="executive_products" src="../static/imgs/CitrusGinger.webp" alt="Citrus & Ginger">
-                <div class="image-caption">Citrus & Ginger</div>
+                <img class="executive_products" src="../static/imgs/fruit/citrusGinger.webp" alt="Citrus&Ginger">
+                <div class="image-caption">Citrus&Ginger</div>
                 <div class="image-cost">R 1001.00</div>
+                <button class="wishlist-button" data-product-name="Citrus&Ginger" data-product-price="1001.00">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
             </div>
             <div class="separator"></div>
             <div class="image-container">
-                <img class="executive_products" src="../static/imgs/seafood.jpg" alt="seafood">
+                <img class="executive_products" src="../static/imgs/meet/seafood.jpg" alt="seafood">
                 <div class="image-caption">Seafood</div>
                 <div class="image-cost">R 590.00</div>
+                <button class="wishlist-button" data-product-name="Seafood" data-product-price="590.00">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
             </div>
         </div>
         <div class="horizontal-separator"></div>
@@ -122,21 +166,36 @@
         <div class="horizontal-separator"></div>
         <div class="image-wrapper">
             <div class="image-container">
-                <img class="executive_products" src="../static/imgs/pineapple.webp" alt="pineapple">
+                <img class="executive_products" src="../static/imgs/fruit/pineapple.webp" alt="pineapple">
                 <div class="image-caption">Pineapple</div>
                 <div class="image-cost">R 899.00</div>
+                <button class="wishlist-button" data-product-name="Pineapple" data-product-price="899.00">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
             </div>
             <div class="separator"></div>
             <div class="image-container">
-                <img class="executive_products" src="../static/imgs/strawberries.png" alt="strawberries">
+                <img class="executive_products" src="../static/imgs/berries/strawberries.png" alt="strawberries">
                 <div class="image-caption">Strawberries</div>
                 <div class="image-cost">R 499.00</div>
+                <button class="wishlist-button" data-product-name="Strawberries" data-product-price="499.00">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
             </div>
             <div class="separator"></div>
             <div class="image-container">
-                <img class="executive_products" src="../static/imgs/raspberries.png" alt="raspberries">
+                <img class="executive_products" src="../static/imgs/berries/raspberries.png" alt="raspberries">
                 <div class="image-caption">Raspberries</div>
                 <div class="image-cost">R 459.00</div>
+                <button class="wishlist-button" data-product-name="Raspberries" data-product-price="459.00">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
             </div>
         </div>
         <div class="horizontal-separator"></div>
@@ -144,22 +203,22 @@
 
         <div class="foot-wrapper">
             <div class="final-image-container">
-                <img class="other_products" src="../static/imgs/orange.jpg" alt="orange">
-                <div class="image-caption">Orange</div>
+                <img class="other_products" src="../static/imgs/other/dishes.jpg" alt="dishes">
+                <div class="image-caption">Dishes</div>
                 <div class="short-horizontal-separator"></div>
             </div>
             <div class="final-image-container">
-                <img class="other_products" src="../static/imgs/cinnamon.jpeg" alt="cinnamon">
+                <img class="other_products" src="../static/imgs/other/cinnamon.jpeg" alt="cinnamon">
                 <div class="image-caption">Cinnamon</div>
                 <div class="short-horizontal-separator"></div>
             </div>
             <div class="final-image-container">
-                <img class="other_products" src="../static/imgs/nuts.jpg" alt="nuts">
+                <img class="other_products" src="../static/imgs/other/nuts.jpg" alt="nuts">
                 <div class="image-caption">Nuts</div>
                 <div class="short-horizontal-separator"></div>
             </div>
             <div class="final-image-container">
-                <img class="other_products" src="../static/imgs/avocado.png" alt="avocado">
+                <img class="other_products" src="../static/imgs/fruit/avocado.png" alt="avocado">
                 <div class="image-caption">Avocado</div>
                 <div class="short-horizontal-separator"></div>
             </div>
@@ -180,36 +239,36 @@
     <div class="top-row">
         <div class="links-container">
             <div class="link-column">
-                <a href="https://localhost">ABOUT US</a>
-                <a href="https://localhost">FAQ</a>
-                <a href="https://localhost">CONTACT US</a>
+                <a href="/">ABOUT US</a>
+                <a href="/">FAQ</a>
+                <a href="/">CONTACT US</a>
             </div>
             <div class="link-column">
-                <a href="https://localhost">PRIVACY POLICY</a>
-                <a href="https://localhost">DELIVERY POLICY</a>
-                <a href="https://localhost">TERMS OF US</a>
+                <a href="/">PRIVACY POLICY</a>
+                <a href="/">DELIVERY POLICY</a>
+                <a href="/">TERMS OF US</a>
             </div>
             <div class="link-column">
-                <a href="https://localhost">HOW TO ORDER</a>
-                <a href="https://localhost">TRACK YOUR ORDER</a>
-                <a href="https://localhost">RETURN & EXCHANGES</a>
+                <a href="/">HOW TO ORDER</a>
+                <a href="/">TRACK YOUR ORDER</a>
+                <a href="/t">RETURN & EXCHANGES</a>
             </div>
         </div>
         <div class="links-container">
             <div class="link-column">
-                <a href="https://localhost">OUR TEAM</a>
-                <a href="https://localhost">BLOG</a>
-                <a href="https://localhost">TESTIMONIALS</a>
+                <a href="/">OUR TEAM</a>
+                <a href="/">BLOG</a>
+                <a href="/">TESTIMONIALS</a>
             </div>
             <div class="link-column">
-                <a href="https://localhost">CAREERS</a>
-                <a href="https://localhost">GIFT CARDS</a>
-                <a href="https://localhost">AFFILIATE PROGRAM</a>
+                <a href="/">CAREERS</a>
+                <a href="/">GIFT CARDS</a>
+                <a href="/">AFFILIATE PROGRAM</a>
             </div>
             <div class="link-column">
-                <a href="https://localhost">SITEMAP</a>
-                <a href="https://localhost">MEDIA CENTER</a>
-                <a href="https://localhost">EVENTS</a>
+                <a href="/">SITEMAP</a>
+                <a href="/">MEDIA CENTER</a>
+                <a href="/">EVENTS</a>
             </div>
         </div>
     </div>
@@ -217,10 +276,10 @@
   <div class="bottom-row">
     <div class="copyright">© 2025 VladimirSC - ALL RIGHTS RESERVED</div>
     <div class="social-links">
-        <a href="https://localhost">EMAIL</a>
-        <a href="https://localhost">INSTAGRAM</a>
-        <a href="https://localhost">VK</a>
-        <a href="https://localhost">TELEGRAM</a>
+        <a href="/">EMAIL</a>
+        <a href="/">INSTAGRAM</a>
+        <a href="/">VK</a>
+        <a href="/">TELEGRAM</a>
     </div>
   </div>
 </footer>

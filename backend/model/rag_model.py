@@ -5,7 +5,7 @@ from langchain_openai import OpenAI
 from backend.model.retriever import load_index
 from langchain.chains import RetrievalQA
 from configs.backend_config import OPENAI_API_KEY, MAX_TOKENS, LOG_FILE
-
+from configs.server_config import *
 
 if not OPENAI_API_KEY:
     print("Error: OPENAI_API_KEY not found in .env file.")
@@ -13,7 +13,7 @@ if not OPENAI_API_KEY:
 
 
 def initialize_rag_model():
-    retriever = load_index().as_retriever(search_kwargs={"k": 10})
+    retriever = load_index().as_retriever(search_kwargs={"k": 5})
     return retriever
 
 
@@ -38,6 +38,14 @@ def answer_question(retriever, question, history=None):
 
         log_entry["docs"] = docs
 
+        url = f"http://{SERVER_HOST}:{SERVER_PORT}/search?query="
+        count_url_elements = 0
+        for doc in docs:
+            if count_url_elements == 0:
+                url = url + doc.metadata['product_name']
+            else:
+                url = url + " " + doc.metadata['product_name']
+            count_url_elements += 1
         if docs:
             llm = OpenAI(temperature=0.5, max_tokens=MAX_TOKENS)
             context = "\n".join([f"Вопрос: {q}\nОтвет: {a}" for q, a in history])
@@ -60,7 +68,7 @@ def answer_question(retriever, question, history=None):
 
                 logging.info(pprint.pformat(log_entry) + "\n")
 
-                return answer["result"]
+                return answer["result"], url
             except Exception as e:
                 log_entry["exception"] = str(e)
                 logging.exception(f"Ошибка во время обработки запроса: {log_entry}")
