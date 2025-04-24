@@ -4,7 +4,7 @@ from datetime import datetime
 from langchain_openai import OpenAI
 from backend.model.retriever import load_index
 from langchain.chains import RetrievalQA
-from configs.backend_config import OPENAI_API_KEY, MAX_TOKENS, LOG_FILE
+from configs.backend_config import OPENAI_API_KEY, MAX_TOKENS, LOG_FILE, proxies
 from configs.server_config import *
 
 if not OPENAI_API_KEY:
@@ -46,8 +46,9 @@ def answer_question(retriever, question, history=None):
             else:
                 url = url + " " + doc.metadata['product_name']
             count_url_elements += 1
+
         if docs:
-            llm = OpenAI(temperature=0.5, max_tokens=MAX_TOKENS)
+            llm = OpenAI(temperature=0.5, max_tokens=MAX_TOKENS, openai_proxy=proxies)
             context = "\n".join([f"Вопрос: {q}\nОтвет: {a}" for q, a in history])
 
             log_entry["context"] = context
