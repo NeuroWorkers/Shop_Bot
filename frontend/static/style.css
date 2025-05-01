@@ -431,16 +431,21 @@ footer a:hover {
 
 .chat-button {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    background-color: transparent;
+    bottom: 5vh;
+    width: 60vw;
+    right: 20vw;
+    background-color: rgba(255, 192, 203, 0.7);
+    border-radius: 50px;
     color: black;
-    padding: 1vh 10vw;
-    border-radius: 5px;
+    padding: 2vh 10vw;
     cursor: pointer;
     border: 1px solid black;
-    box-shadow: 0 30px 60px red;
-
+    box-shadow:
+            0 1px 5px rgba(255,255,255,1),
+            0 -1px 5px rgba(255,255,255,1),
+            -1px 0 5px rgba(255,255,255,1),
+            1px 0 5px rgba(255,255,255,1);
+    text-align: center;
     font-family: 'Roboto', serif;
     text-shadow:
                 -1px -1px 0 rgba(255, 255, 255, 0.5),
@@ -448,7 +453,7 @@ footer a:hover {
                 -1px  1px 0 rgba(255, 255, 255, 0.5),
                  1px  1px 0 rgba(255, 255, 255, 0.5);
     animation: fadeIn 2s ease-in-out;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     font-weight: 900;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -456,36 +461,44 @@ footer a:hover {
 
 .chat-popup {
     position: fixed;
-    bottom: 5vh;
-    right: 0;
-    width: 26.5vw;
+    bottom: 8vh;
+    right: 20vw;
+    width: 60vw;
     height: 50vh;
-    background-color: #FDFAF3;
+    background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid lightgray;
-    border-radius: 5px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow:
+            0 1px 5px rgba(255,255,255,1),
+            -1px 0 5px rgba(255,255,255,1),
+            1px 0 5px rgba(255,255,255,1);
     display: none;
 
     z-index: 9999 !important;
 }
 
 .chat-header {
-    background-color: lightgray;
+    background-color: transparent;
     color: white;
+    margin-top: 1vh;
     padding: 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 -1px 20px lightgray;
+    box-shadow: none;
+    border-radius: 50px;
 }
 
 .chat-content {
     overflow-y: auto;
-    height: calc(100% - 1.5vh);
-    margin: 5px;
+    height: calc(100% - 4.5vh);
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .chat-messages {
-    height: calc(100% - 2.5vh);
+    height: calc(100% - 4.5vh);
     display: block;
     overflow-y: scroll;
 }
@@ -496,11 +509,11 @@ footer a:hover {
     font-weight: 700;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: lightcoral;
+    color: white;
 }
 
 .u-message {
-    color: burlywood;
+    color: white;
 }
 
 .user-message, .bot-message {
@@ -510,20 +523,40 @@ footer a:hover {
     overflow-y: auto;
 }
 
+.bot-message a {
+    color: red;
+}
+
 .user-message, .bot-message {
-    background-color: lightgray;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
 }
 
 #message-input {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: -1%;
+    right: 20vw;
+    width: 60vw;
+    bottom: 3vh;
+    color: white;
+    font-size: 1.6vh;
+    font-family: Dharma Gothic E, serif;
+    padding-left: 2vw;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
     border: 2px solid lightgray;
-    width: 26.5vw;
     height: 5.2vh;
-    box-shadow: 0 5px 7px lightgray;
+    box-shadow:
+            0 1px 5px rgba(255,255,255,1),
+            -1px 0 5px rgba(255,255,255,1),
+            1px 0 5px rgba(255,255,255,1);
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#message-input::placeholder {
+    color: white;
+    font-size: 1.6vh;
+    font-family: Dharma Gothic E, serif;
 }
 
 #send-button {
@@ -536,8 +569,12 @@ footer a:hover {
 
 #closeChat {
     background: none;
-    color: lightcoral;
+    border-radius: 5px;
+    color: white;
+    font-family: Dharma Gothic E, serif;
     border: none;
+    font-size: 2vw;
+    font-weight: 900;
     cursor: pointer;
 }
 

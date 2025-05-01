@@ -72,8 +72,8 @@ def get_products():
 @app.route('/chat', methods=['POST'])
 def chat():
     question = request.form['question']
-    answer, url = answer_question(retriever, question, HISTORY)
-    return jsonify({'answer': answer, 'url': url})
+    answer = answer_question(retriever, question, HISTORY)
+    return jsonify({'answer': answer})
 
 
 # Запуск сервера

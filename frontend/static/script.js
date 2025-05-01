@@ -52,16 +52,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const botMessage = document.createElement('div');
                 botMessage.classList.add('chat-message', 'bot-message');
-                botMessage.textContent = data.answer;
 
-                const botLink = document.createElement('a');
-                botLink.classList.add('chat-message', 'bot-message');
-                botLink.href = data.url;
-                botLink.textContent = 'Собрал для вас продукты по вашему запросу на отдельной странице. Чтобы перейти, нажмите на это сообщение.';
+                const answerText = data.answer;
 
+                const links = answerText.match(/http?:\/\/(?!http?:\/\/)[^<\s]+\?query=[^.,;:]+(?=\s|[.,;:]|$)/g);
+                const parts = answerText.split(/http?:\/\/(?!http?:\/\/)[^<\s]+\?query=[^.,;:]+(?=\s|[.,;:]|$)/g);
+
+                const fragment = document.createDocumentFragment();
+
+                parts.forEach((part, index) => {
+                    if (part) {
+                        const textNode = document.createTextNode(part);
+                        fragment.appendChild(textNode);
+                    }
+                    if (index < links.length) {
+                        const linkElement = document.createElement('a');
+                        linkElement.href = links[index];
+                        linkElement.target = '_blank';
+                        linkElement.rel = 'noopener noreferrer';
+                        linkElement.textContent = "товары по вашему запросу";
+
+                        fragment.appendChild(linkElement);
+                    }
+                });
+                botMessage.appendChild(fragment);
                 chatMessages.appendChild(botAuthor);
                 chatMessages.appendChild(botMessage);
-                chatMessages.appendChild(botLink);
 
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             })
@@ -111,10 +127,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('chatButton').addEventListener('click', function() {
         document.getElementById('chatPopup').style.display = 'block';
+        document.getElementById('chatButton').style.display = 'none';
     });
 
     document.getElementById('closeChat').addEventListener('click', function() {
         document.getElementById('chatPopup').style.display = 'none';
+        document.getElementById('chatButton').style.display = 'block';
     });
 });
 
@@ -208,3 +226,21 @@ fetch('/products')
         });
     })
     .catch(error => console.error('Error fetching products:', error));
+
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = scrollPosition / documentHeight;
+
+    if (scrollPercentage < 0.33) {
+        document.getElementById('chatButton').style.backgroundColor = 'rgba(255, 192, 203, 0.7)';
+    } else if (scrollPercentage < 0.85) {
+        document.getElementById('chatButton').style.backgroundColor = 'rgba(150, 150, 150, 0.7)';
+    } else {
+        document.getElementById('chatButton').style.backgroundColor = 'rgba(255, 255, 224, 0.7)';
+    }});
+
+function goBack() {
+    window.history.back();
+}
