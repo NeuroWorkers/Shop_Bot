@@ -233,12 +233,16 @@ window.addEventListener('scroll', () => {
     const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercentage = scrollPosition / documentHeight;
 
-    if (scrollPercentage < 0.33) {
+    if (scrollPercentage < 0.15) {
+        document.getElementById('chatButton').style.backgroundColor = 'rgba(222, 184, 135, 0.7)';
+    }
+    else if (scrollPercentage < 0.33) {
         document.getElementById('chatButton').style.backgroundColor = 'rgba(255, 192, 203, 0.7)';
-    } else if (scrollPercentage < 0.85) {
+    }
+    else if (scrollPercentage < 0.85) {
         document.getElementById('chatButton').style.backgroundColor = 'rgba(150, 150, 150, 0.7)';
     } else {
-        document.getElementById('chatButton').style.backgroundColor = 'rgba(255, 255, 224, 0.7)';
+        document.getElementById('chatButton').style.backgroundColor = 'rgba(222, 184, 135, 0.7)';
     }});
 
 function goBack() {
