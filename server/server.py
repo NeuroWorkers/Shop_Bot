@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from backend.model.retriever import create_index
-from backend.utils.utils import is_folder_empty
-from configs.backend_config import VECTOR_STORE_PATH, HISTORY, BASE_DIR, DATA_PATH
+from backend.utils.utils import ensure_path_exists
+from configs.backend_config import VECTOR_STORE_PATH, HISTORY, BASE_DIR, DATA_PATH, LOG_FILE
 from backend.model.rag_model import initialize_rag_model, answer_question
 from configs.server_config import *
 from backend.utils.utils import *
@@ -13,6 +13,8 @@ app = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'frontend/templates
 
 if is_folder_empty(VECTOR_STORE_PATH):
     create_index()
+
+ensure_path_exists(LOG_FILE)
 
 retriever = initialize_rag_model()
 

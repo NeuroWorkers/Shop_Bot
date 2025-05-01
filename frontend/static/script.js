@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const answerText = data.answer;
 
-                const links = answerText.match(/http?:\/\/(?!http?:\/\/)[^<\s]+\?query=[^.,;:]+(?=\s|[.,;:]|$)/g);
-                const parts = answerText.split(/http?:\/\/(?!http?:\/\/)[^<\s]+\?query=[^.,;:]+(?=\s|[.,;:]|$)/g);
+                const links = answerText.match(/https?:\/\/(?!http?:\/\/)[^<\s]+\?query=[^.,;:]+(?=\s|[.,;:]|$)/g);
+                const parts = answerText.split(/https?:\/\/(?!http?:\/\/)[^<\s]+\?query=[^.,;:]+(?=\s|[.,;:]|$)/g);
 
                 const fragment = document.createDocumentFragment();
 
